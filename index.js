@@ -143,17 +143,17 @@ async function startnigg(phone) {
             1,
             'N'
           )
-          const sessi = 'SLG~' + output.split('https://pastebin.com/')[1]
+          const sessi = 'SLG-MD~' + output.split('https://pastebin.com/')[1]
           console.log(sessi)
           await delay(2000)
-          let guru = await negga.sendMessage(negga.user.id, { text: sessi })
+          let session = await negga.sendMessage(negga.user.id, { text: sessi })
           await delay(2000)
           await negga.sendMessage(
             negga.user.id,
             {
-              text: 'Hello there! 👋 \n\nDo not share your session id with anyone.\n\nPut the above in SESSION_ID var\n\nThanks for using SLG-BOT\n\n join support group:- https://chat.whatsapp.com/CSqEpYznHjG8iS4wSJCKfz \n',
+              text: 'BIENVENUE sur SLG-MD VOICI VOTRE SESSION\n',
             },
-            { quoted: guru }
+            { quoted: session }
           )
 
           console.log('Connected to WhatsApp Servers')
